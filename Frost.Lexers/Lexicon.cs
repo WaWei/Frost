@@ -1,5 +1,5 @@
-﻿using Frost.Lexers.RegularExpressions;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Frost.Lexers.RegularExpressions;
 
 namespace Frost.Lexers
 {
@@ -20,7 +20,7 @@ namespace Frost.Lexers
             return new TokenInfo(i, descriptions[i]);
         }
 
-        public DFA GenerateDFA()
+        public Engine GenerateDFA()
         {
             throw new System.NotImplementedException();
         }

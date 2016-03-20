@@ -19,7 +19,8 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>2</WarningLevel>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>CS0649</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -40,7 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DFA.cs" />
+    <Compile Include="FiniteAutomations\DFA.cs" />
+    <Compile Include="FiniteAutomations\DFAEdge.cs" />
+    <Compile Include="FiniteAutomations\DFAState.cs" />
+    <Compile Include="FiniteAutomations\NFA.cs" />
+    <Compile Include="FiniteAutomations\NFAEdge.cs" />
+    <Compile Include="FiniteAutomations\NFAState.cs" />
+    <Compile Include="Engine.cs" />
     <Compile Include="Lexer.cs" />
     <Compile Include="Lexicon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -48,13 +55,13 @@
     <Compile Include="RegularExpressions\CharExpression.cs" />
     <Compile Include="RegularExpressions\ClosureExpression.cs" />
     <Compile Include="RegularExpressions\ConcatenationExpression.cs" />
-    <Compile Include="RegularExpressions\EmptyExpression.cs" />
     <Compile Include="RegularExpressions\RegularExpression.cs" />
     <Compile Include="SourceLocation.cs" />
     <Compile Include="SourceReader.cs" />
     <Compile Include="Token.cs" />
     <Compile Include="TokenInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

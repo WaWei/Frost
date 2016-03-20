@@ -7,7 +7,7 @@ namespace Frost.Lexers
 {
     public class Lexer
     {
-        DFA engine;
+        Engine engine;
         StringBuilder str;
         Lexicon lexicon;
         SourceReader source;

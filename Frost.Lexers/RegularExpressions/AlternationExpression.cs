@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Frost.Lexers.FiniteAutomations;
 
 namespace Frost.Lexers.RegularExpressions
 {
@@ -10,5 +7,10 @@ namespace Frost.Lexers.RegularExpressions
     {
         public RegularExpression Left;
         public RegularExpression Right;
+
+        public override NFA ConvertToNFA()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
